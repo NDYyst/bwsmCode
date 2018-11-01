@@ -70,7 +70,7 @@
     float: left;
   }
   .logo a{
-    display: inline-block;
+    display: block;
     width: 170px;
     height: 80px;
     background: url("../../../static/images/publicImg/logo.png") no-repeat 0 0;

@@ -24,8 +24,6 @@
           </router-link>
         </div>
       </div>
-
-
       <!--轮播分页器-->
       <div class="swiper-pagination"></div>
     </div>
@@ -185,7 +183,7 @@
     mounted() {
       //轮播图配置
       new Swiper('.swiper-container', {
-        autoplay: true,
+        autoplay:true,
         noSwipingClass : 'stop-swiping',
         pagination: {
           el: '.swiper-pagination',
@@ -214,9 +212,6 @@
   .swiper-wrapper .swiper-slide a {
     display: block;
     text-align: center;
-  }
-  .swiper-wrapper .swiper-slide a img {
-    width: 100%;
   }
   /*服务范围*/
   .serviceScope {
