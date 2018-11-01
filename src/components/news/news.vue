@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <section>
+    新闻页面
+  </section>
 </template>
 
 <script>
