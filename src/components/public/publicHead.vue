@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: "head",
+    name: "publicHead",
     data() {
       return {
         headNav: [
@@ -52,6 +52,12 @@
             chinese: '联系我们',
             english: 'CONTACT',
             url: '/contact',
+            show: true
+          },
+          {
+            chinese: '抽奖',
+            english: 'LUCKUDRAW',
+            url: '/luckyDraw',
             show: true
           },
         ]

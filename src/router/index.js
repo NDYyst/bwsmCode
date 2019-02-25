@@ -6,6 +6,8 @@ import portfolio from '../components/portfolio/portfolio'
 import service from '../components/service/service'
 import news from '../components/news/news'
 import contact from '../components/contact/contact'
+import luckyDraw from '../components/luckyDraw/luckyDraw'
+
 
 
 Vue.use(Router)
@@ -65,6 +67,15 @@ export default new Router({
         indexFootShow: false,
         footShow: true,
       }
-    }
+    },
+    { //抽奖
+      path: '/luckyDraw',
+      name: 'luckyDraw',
+      component: luckyDraw,
+      meta: {
+        indexFootShow: false,
+        footShow: true,
+      }
+    },
   ]
 })

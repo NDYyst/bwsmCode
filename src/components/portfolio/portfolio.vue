@@ -10,7 +10,8 @@
   export default {
     name: "portfolio",
     mounted () {
-      this.init()
+      console.log($)
+      // this.init()
     },
     methods: {
 
