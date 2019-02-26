@@ -1,10 +1,53 @@
 <template>
+  <section>
+    <div class="btn">
+      <button @click="smash">砸金蛋</button>
+    </div>
 
+    <div class="mask" v-show="smashPrize"></div>
+    <div class="smashEggs" v-show="smashPrize">
+      <div class="smash" v-show="lucky">
+        <img class="caiDai" src="../../assets/img/caidai.png" alt="">
+        <img class="eggs" src="../../assets/img/egg.png" alt="">
+        <img class="hammer" src="../../assets/img/hammer.png" alt="">
+        <p>请稍后...</p>
+      </div>
+      <div class="prize" v-show="prize">
+        <div class="close" @click="close()"></div>
+        <div class="content">
+          <p class="title">获得 999 抵扣券</p>
+          <p>您可在“<router-link to="/"> 个人中心 </router-link>”查看您的抵扣券。</p>
+          <div class="button" @click="close()">确定</div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
   export default {
-    name: "news",
+    name: "smashEggs",
+    data() {
+      return {
+        smashPrize: false, //点击砸奖
+        lucky: false, //抽奖动作
+        prize: false, //中奖
+      }
+    },
+    methods: {
+      smash() {
+        this.smashPrize = true;
+        this.lucky = true;
+        setTimeout(()=>{
+          this.lucky = false;
+          this.prize = true;
+        },3500);
+      },
+      close() {
+        this.smashPrize = false;
+        this.prize = false
+      }
+    },
   }
 </script>
 
@@ -192,9 +235,10 @@
     animation: scale 1.1s forwards;
   }
   .smashEggs .prize .close {
-    width: 64px;
-    height: 64px;
-    margin-top: 30px;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    margin-top: 40px;
     float: right;
     background: url("../../assets/img/close.png") no-repeat center/cover;
   }

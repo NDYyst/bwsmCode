@@ -7,8 +7,7 @@ import service from '../components/service/service'
 import news from '../components/news/news'
 import contact from '../components/contact/contact'
 import luckyDraw from '../components/luckyDraw/luckyDraw'
-
-
+import smashEggs from '../components/smashEggs/smashEggs'
 
 Vue.use(Router)
 
@@ -72,6 +71,15 @@ export default new Router({
       path: '/luckyDraw',
       name: 'luckyDraw',
       component: luckyDraw,
+      meta: {
+        indexFootShow: false,
+        footShow: true,
+      }
+    },
+    { //砸金蛋demo
+      path: '/smashEggs',
+      name: 'smashEggs',
+      component: smashEggs,
       meta: {
         indexFootShow: false,
         footShow: true,

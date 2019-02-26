@@ -60,6 +60,12 @@
             url: '/luckyDraw',
             show: true
           },
+          {
+            chinese: '砸金蛋',
+            english: 'SMASHEGGS',
+            url: '/smashEggs',
+            show: true
+          },
         ]
       }
     },
